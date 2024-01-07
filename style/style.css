@@ -1,0 +1,51 @@
+body{
+    background: linear-gradient(to right, rgba(243,122,132,1) 14%, rgba(140,181,243,1) 71%);
+}
+
+header{
+    height: 70px;
+    box-shadow: 10px 10px 12px -13px rgba(199,199,199,1);
+}
+
+header #logo{
+    width: 70px;
+}
+
+header h1{
+    color: #2960B7;
+    font-size: 1.8em;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.57);
+    background-color: white;
+}
+
+main h1{
+    color:#302e2e;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+main a{
+    text-decoration: none;
+    color: #2960B7;
+}
+
+footer {
+    height: 40px;
+    background-color: white;
+    box-shadow: inset 2px 0px 17px -9px #000000af;
+}
+
+footer h2{
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+}

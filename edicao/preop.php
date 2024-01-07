@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paloma Dantas">
+    <title>Coleta de Dados HSVP</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .examePre{
+            background-color: #b3c9eb;
+            box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.57);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--CABEÇALHO DATA FUSION-->
+    <header class="bg-light">
+        <div>
+            <div class="row m-0">
+                <!--LOGO E NOME-->
+                <div class="col-sm-11 d-flex">
+                    <img id="logo" class="ms-4" src="../images/data-fusion.png">
+                    <h1 class="mt-3 mb-2 ms-2">Data Fusion</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--PRÉ-OPERATÓRIO-->
+        <div>
+            <h1 class="text-center">
+                Pré-Operatório
+            </h1>
+
+            <div class="input-group mb-2">
+                <!--NOME PACIENTE-->
+                <span class="input-group-text" id="nomePaciente" name="nomePaciente">Nome do paciente</span>
+                <input type="text" class="form-control" disabled value="Paloma Dantas">
+            </div>
+
+            <div class="input-group mb-2"> 
+                <!--PROCEDIMENTO-->
+                <span class="input-group-text" id="procedimentosP" name="procedimentosP">Procedimentos propostos</span>
+                <input type="text" class="form-control" placeholder="Entra uma lista de procedimentos existentes">
+                <button type="button" class="btn btn-primary"><i class="bi bi-plus-lg"></i></button>
+            </div>
+
+            <div class="input-group mb-2"> 
+                <!--PROCEDIMENTO X-->
+                <input type="text" class="form-control" value="000x - Revascularização do miocárdio" disabled>
+                <button type="button" class="btn btn-danger"><i class="bi bi-dash"></i></button>
+            </div>
+
+            <div class="input-group mb-2"> 
+                <!--PROCEDIMENTO Y-->
+                <input type="text" class="form-control" value="000y - Troca de válvula aórtica" disabled>
+                <button type="button" class="btn btn-danger"><i class="bi bi-dash"></i></button>
+            </div>
+
+            <div class="input-group mb-3">
+                <!--PESO-->        
+                <span class="input-group-text" id="peso" name="peso">Peso</span>
+                <input type="number" class="form-control me-2" min="1" placeholder="quilos">
+
+                <!--ALTURA-->
+                <span class="input-group-text" id="altura" name="altura">Altura</span>
+                <input type="number" class="form-control" min="1" placeholder="metros">
+            </div>
+
+            <div class="input-group mb-3">
+                <!--DIABETES-->
+                <span class="input-group-text" id="diabetes" name="diabetes">Diabetes</span>
+                <select class="form-select me-2">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+
+                <!--TABAGISMO-->
+                <span class="input-group-text" id="tabagismo" name="tabagismo">Tabagismo</span>
+                <select class="form-select">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <!--DOENÇAS RENAIS-->
+                <span class="input-group-text" id="ARenais" name="ARenais">Alterações Renais</span>
+                <select class="form-select me-2">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+
+                <!--ANTICOAGULANTES-->
+                <span class="input-group-text" id="anticoagulantes" name="anticoagulantes">Anticoagulantes orais diretos(DOACs)?</span>
+                <select class="form-select">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+            </div>
+            
+            <div class="input-group mb-3">
+                <!--CIRURGIAS-->
+                <span class="input-group-text" id="cirurgiasCardiacas" name="cirurgiasCardiacas">Cirurgias cardiacas prévias</span>
+                <select class="form-select me-2">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+
+                <!--CLOPIDOGREL-->
+                <span class="input-group-text" id="clopidogrel" name="clopidogrel">Clopidogrel 5 dias</span>
+                <select class="form-select me-2">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+
+                <!--EJEÇÃO-->
+                <span class="input-group-text" id="fracaoEjecao" name="fracaoEjecao">Fração de ejeção preservada</span>
+                <select class="form-select">
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+            </div>
+        </div>
+
+        <!--EXAMES PRÉ OPERATÓRIOS-->
+        <div class="examePre">
+            <h1 class="text-center">
+                Exames Pré-Operatórios
+            </h1>
+
+            <div class="input-group mb-3">
+                <!--VALORES HB-->
+                <span class="input-group-text" id="valoresHb" name="valoresHb">Valores de hb</span>
+                <input type="number" class="form-control me-2" min="1">
+
+                <!--VALORES HT-->
+                <span class="input-group-text" id="valoresHt" id="valoresHt">Valores de ht</span>
+                <input type="number" class="form-control me-2" min="1">
+    
+                <!--EXAMES DE IMAGEM-->
+                <span class="input-group-text" id="exameImg" name="exameImg">Exames de imagem</span>
+                <input type="text" class="form-control me-2" min="1">
+            </div>
+
+            <div class="input-group mb-3">
+                <!--UREIA-->
+                <span class="input-group-text" id="ureia" name="ureia">Ureia</span>
+                <input type="number" class="form-control me-2" min="1">
+
+                <!--CREATININA-->
+                <span class="input-group-text" id="creatinina" id="creatinina">Creatinina</span>
+                <input type="number" class="form-control me-2" min="1">
+    
+                <!--TAP-->
+                <span class="input-group-text" id="tap" name="tap">TAP</span>
+                <input type="number" class="form-control me-2" min="1">
+                
+                <!--PLAQUETAS-->
+                <span class="input-group-text" id="plaquetas" name="plaquetas">Plaquetas</span>
+                <input type="number" class="form-control me-2">   
+            </div>
+
+            <div class="input-group mb-3">
+                <!--KPTT-->
+                <span class="input-group-text" id="kptt" name="kptt">KPTT</span>
+                <input type="number" class="form-control me-2" min="1">
+
+                <!--INR-->
+                <span class="input-group-text" id="inr" name="inr">INR</span>
+                <input type="number" class="form-control me-2" min="1">
+            </div>
+        </div>
+        
+        <div class="input-group mb-2"> 
+            <!--TERMO DE CONSENTIMENTO-->
+            <span class="input-group-text" id="tConsentimento" name="anticoagulantes">TERMO DE CONSENTIMENTO</span>
+            <select class="form-select">
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+            </select>
+
+            <div class="d-grid gap-2 d-flex justify-content-end ms-5">
+                <button class="btn btn-primary me-md-1" type="button">Salvar</button>
+                <a href="fichaPaciente.php" class="btn btn-danger" type="button">Voltar</a>
+            </div>
+        </div>
+    </main>
+
+    <!--RODAPÉ-->  
+    <footer class="fixed-bottom">
+        <h2>
+            Desenvolvido por Data Fusion
+        </h2>
+    </footer>
+</body>
+</html>
