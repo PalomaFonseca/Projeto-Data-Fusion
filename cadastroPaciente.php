@@ -75,7 +75,7 @@
         <!--SALVAR E VOLTAR-->
         <div class="d-grid gap-2 d-flex justify-content-b-2">
             <button class="btn btn-success me-md-1" type="button">Salvar</button>
-            <a href="index.php" class="btn btn-danger" type="button">Voltar</a>
+            <a href="index.html" class="btn btn-danger" type="button">Voltar</a>
         </div>
     </main>
 
